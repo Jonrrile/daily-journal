@@ -5,5 +5,16 @@
 
 .flex-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+}
+
+body {
+    background-color: #667cfc;
+    font-style: italic;
+    font-family: fantasy;
+}
+
+img {
+    width: 700px;
+    height: 500px;
 }
