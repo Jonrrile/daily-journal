@@ -1,31 +1,3 @@
-/*
-    Define the keys and value for a JavaScript object that
-    represents a journal entry about what you learned today
-*/
-const journalEntry = [
-{
-    date: "June 2nd 2020",
-    concept: "JavaScript Objects",
-    entry: "Today we learned about automating HTML entries utilizing JavaScript",
-    mood: "Confused"
-},
-
-{
-    date: "June 2nd 2020",
-    concept: "JavaScript Objects",
-    entry: "Today we learned about automating HTML entries utilizing JavaScript",
-    mood: "Confused"
-
-
-},
-
-{
-    date: "June 3rd 2020",
-    concept: "JavaScript Functions",
-    entry: "Learning a little  more but still very confused about functions",
-    mood: "hopeful?"
-}
-]
 
 /*
     Purpose: To create, and return, a string template that
@@ -61,4 +33,22 @@ const renderJournalEntries = () => {
 }
 
 // Invoke the render function
+
+let journalEntry = []
+
+const getJournalEntry = () => {
+    return fetch("http://localhost:3000/journalEntry") // Fetch from the API
+    .then((httpResponse) => {
+        return httpResponse.json()
+    }  
+    )// Parse as JSON
+    
+    .then(
+        (entries) => {
+        // What should happen when we finally have the array?
+            journalEntry = entries 
+        }
+    )
+}
+
 renderJournalEntries();
