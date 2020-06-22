@@ -1,3 +1,4 @@
+/*
 getJournalEntry().then(
     () => {
         console.log("inside", journalEntry)
@@ -5,3 +6,4 @@ getJournalEntry().then(
     }
 )
 console.log("outside", journalEntry)
+*/

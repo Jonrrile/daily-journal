@@ -3,22 +3,22 @@
     represents a single journal entry object as HTML
 
     Arguments: journalEntry (object)
-*/
 
-const makeJournalEntryComponent = (journalEntry) => {
+
+const makeJournalEntryComponent = {
+    journalEntry (singleEntry) {
     // Create your own HTML structure for a journal entry
-    `return
- 
-   <div>
-   <h1>${journalEntry.date}</h1>
-    <p>${journalEntry.concept}</p>
-    <p>${journalEntry.entry}</p>
-    <p>${journalEntry.mood}</p>
+    return`
+    <div>
+   <h1>${singleEntry.date}</h1>
+    <p>${singleEntry.concept}</p>
+    <p>${singleEntry.entry}</p>
+    <p>${singleEntry.mood}</p>
     </div>`
-
+    }
 }
 
-export default makeJournalEntryComponent
+export default makeJournalEntryComponent;
 
 /*
 Responsible for generating a list of fish HTML
