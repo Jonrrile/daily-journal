@@ -1,8 +1,8 @@
-const createJournalEntry = (date, concepts, content, mood) => {
+const createJournalEntry = (date, concepts, entry, mood) => {
     const newJournalEntry = {
       "date": date,
       "concepts": concepts,
-      "content": content,
+      "entry": entry,
       "mood": mood
     };
   
