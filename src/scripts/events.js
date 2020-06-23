@@ -5,7 +5,7 @@ createEditButton.addEventListener("click", event => {
     }
 })
 
-/*
+
 const recordJournalEntry = document.querySelector("#save")
 recordJournalEntry.addEventListener("click", event => {
     const date = document.querySelector("#journalDate").value
@@ -15,18 +15,7 @@ recordJournalEntry.addEventListener("click", event => {
 
     if (date === "" || concepts === "" || entry === "" || mood === "") {
         alert("Please fill out all fields!") 
-        else {
-            const makeEntry = createJournalEntry(date, concepts, entry, mood)
-        API.saveJournalEntry(makeEntry)
-        .then(
-            () => {
-                return API.getJournalEntries()
-            })
-            .then (() => {
-                renderJournalEntries.entryLog(API.journalEntries)
-            });
-    //if (event.target.id.startsWith("save")) {
-      //  alert("Save!")
-    */
+    }
+})
 
     export default createEditButton
