@@ -1,3 +1,16 @@
+/*
+    Main application logic that uses the functions and objects
+    defined in the other JavaScript files.
+
+    Change the fake variable names below to what they should be
+    to get the data and display it.
+*/
+import API from "./data.js"
+import renderJournalEntries from "./entryList.js"
+
+API.getJournalEntries().then((response) => renderJournalEntries(response));
+/*
+
 //import API from "./data.js"
 //import renderJournalEntries from "./entryList.js"
 
@@ -20,7 +33,6 @@ import renderJournalEntries from "./entryList.js" */
 
 
 
-let journalEntries = []
 
 const createEditButton = document.querySelector("#editJournal");
 createEditButton.addEventListener("click", event => {
@@ -29,6 +41,7 @@ createEditButton.addEventListener("click", event => {
     }
 })
 
+  /*
    const getJournalEntries = () => {
        return fetch("http://localhost:3000/journalEntries") // Fetch from the API
        .then((httpResponse) => {
@@ -48,6 +61,7 @@ createEditButton.addEventListener("click", event => {
 
 
 
+    
     const renderJournalEntries = () => {
         for (const entry of journalEntries) {
             const journalHTML = makeJournalEntryComponent(entry)
@@ -81,3 +95,4 @@ createEditButton.addEventListener("click", event => {
         renderJournalEntries()
     }
 )
+*/
