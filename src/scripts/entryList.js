@@ -1,23 +1,14 @@
-/*
-import makeJournalEntryComponent from "./entryComponent.js"
 import API from "./data.js"
+import makeJournalEntryComponent from "./entryComponent.js"
 
-const renderJournalEntries = {
+let journalEntries = []
 
-    entryMaker(journalEntries) {
-        const journalElement = document.querySelector(".entryLog")
-        journalElement.innerHTML = ""
-    for (let  singleEntry of journalEntries) {
-        const journalHTML = makeJournalEntryComponent.journalEntry(singleEntry)
-        journalElement.innerHTML += journalHTML
+
+const renderJournalEntries = () => {
+    for (const entry of journalEntries) {
+        const journalHTML = makeJournalEntryComponent(entry)
+        const journalArticleElement = document.querySelector(".entryLog");
+        journalArticleElement.innerHTML += journalHTML
     }
-
-
-    }
-
 }
-
-console.log(entryMaker)
-
-export default renderJournalEntries
-*/
+export default renderJournalEntries;

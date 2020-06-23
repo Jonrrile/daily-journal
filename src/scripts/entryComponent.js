@@ -1,3 +1,20 @@
+
+    
+    
+    const makeJournalEntryComponent = (journalEntries) => {
+        // Create your own HTML structure for a journal entry
+       return `
+       <div>
+       <h1>${journalEntries.date}</h1>
+        <p>${journalEntries.concept}</p>
+        <p>${journalEntries.entry}</p>
+        <p>${journalEntries.mood}</p>
+        </div>`
+    }
+
+export default makeJournalEntryComponent;
+
+
 /*
     Purpose: To create, and return, a string template that
     represents a single journal entry object as HTML

@@ -1,8 +1,11 @@
-/*
-import API from "./data.js"
-import renderJournalEntries from "./entryList.js"
+//import API from "./data.js"
+//import renderJournalEntries from "./entryList.js"
 
-API.getJournalEntries().then(renderJournalEntries.entryConverter)
+//console.log("test")
+
+//import renderJournalEntries from "./entryList.js"
+
+//API.getJournalEntries().then(renderJournalEntries.entryConverter)
 
 
 /*var click = document.querySelector("#save")
@@ -15,33 +18,16 @@ API.getJournalEntries().then(renderJournalEntries)
 import API from "./data.js"
 import renderJournalEntries from "./entryList.js" */
 
-/*
-const journalEntries = [
-    {
-        date: "June 2nd 2020",
-        concept: "JavaScript Objects",
-        entry: "Today we learned about automating HTML entries utilizing JavaScript",
-        mood: "Confused"
-    },
-    
-    {
-        date: "June 2nd 2020",
-        concept: "JavaScript Objects",
-        entry: "Today we learned about automating HTML entries utilizing JavaScript",
-        mood: "Confused"
-    
-    
-    },
-    
-    {
-        date: "June 3rd 2020",
-        concept: "JavaScript Functions",
-        entry: "Learning a little  more but still very confused about functions",
-        mood: "hopeful?"
+
+
+let journalEntries = []
+
+const createEditButton = document.querySelector("#editJournal");
+createEditButton.addEventListener("click", event => {
+    if (event.target.id.startsWith("editJournal")) {
+        alert("Edit!")
     }
-    ]
-    */
-   let journalEntries = []
+})
 
    const getJournalEntries = () => {
        return fetch("http://localhost:3000/journalEntries") // Fetch from the API
@@ -79,13 +65,17 @@ const journalEntries = [
         <p>${journalEntries.concept}</p>
         <p>${journalEntries.entry}</p>
         <p>${journalEntries.mood}</p>
+        <section id="journalForm">
+        <form>
+            <button type="edit" id="editJournal">Edit</button>
+            <input type="hidden" id="editedId" value="" />
+            ...
+        </form>    
+    
+    </section>
         </div>`
     }
-    /*
-    Responsible for generating a list of fish HTML
-    representations, and putting in the browser
-    */      
-   
+
    getJournalEntries().then(
     () => {
         renderJournalEntries()
