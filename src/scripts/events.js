@@ -1,3 +1,5 @@
+import createJournalEntry from "./createEntry";
+
 const createEditButton = document.querySelector("#editJournal");
 createEditButton.addEventListener("click", event => {
     if (event.target.id.startsWith("editJournal")) {
@@ -15,7 +17,7 @@ recordJournalEntry.addEventListener("click", event => {
 
     if (date === "" || concepts === "" || entry === "" || mood === "") {
         alert("Please fill out all fields!") 
-    }
+    } else (createJournalEntry());
 })
 
     export default createEditButton

@@ -1,14 +1,10 @@
-//const API = {
-  //  getJournalEntries: () => {
-    //    return fetch("http://localhost:3000/journalEntries")
-      //  .then(response => response.json())
-    //}
-//}
-
-
 const API = {
+    getJournalEntries: () => {
+        return fetch("http://localhost:3000/journalEntries")
+        .then(response => response.json())
+    },
     saveJournalEntry: (newEntryObject) => {
-        return fetch("put the URL to the API here", {
+        return fetch("http://localhost:3000/journalEntries", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -18,4 +14,4 @@ const API = {
     }
 }
 
-export default API
+export default API; 
