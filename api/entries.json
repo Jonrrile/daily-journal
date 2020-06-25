@@ -27,6 +27,20 @@
       "concept": "Browser Interactivity",
       "entry": "Learned how to implement some toggling and slect elements into our website. Things are clicking a litte!",
       "mood": "Finally Friday (:"
+    },
+    {
+      "date": "2020-06-25",
+      "concepts": "A",
+      "entry": "A",
+      "mood": "sad",
+      "id": 5
+    },
+    {
+      "date": "2020-06-25",
+      "concepts": "A",
+      "entry": "A",
+      "mood": "sad",
+      "id": 6
     }
   ]
 }

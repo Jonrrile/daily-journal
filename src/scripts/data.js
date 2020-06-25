@@ -3,6 +3,7 @@ const API = {
         return fetch("http://localhost:3000/journalEntries")
         .then(response => response.json())
     },
+   
     saveJournalEntry: (newEntryObject) => {
         return fetch("http://localhost:3000/journalEntries", {
             method: "POST",
@@ -13,5 +14,4 @@ const API = {
         })
     }
 }
-
 export default API; 

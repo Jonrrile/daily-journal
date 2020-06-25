@@ -1,4 +1,5 @@
-import createJournalEntry from "./createEntry";
+
+//import createJournalEntry from "./createEntry";
 
 const createEditButton = document.querySelector("#editJournal");
 createEditButton.addEventListener("click", event => {
@@ -8,16 +9,5 @@ createEditButton.addEventListener("click", event => {
 })
 
 
-const recordJournalEntry = document.querySelector("#save")
-recordJournalEntry.addEventListener("click", event => {
-    const date = document.querySelector("#journalDate").value
-    const concepts = document.querySelector("#concepts").value
-    const entry = document.querySelector("#entry").value
-    const mood = document.querySelector("#mood").value
-
-    if (date === "" || concepts === "" || entry === "" || mood === "") {
-        alert("Please fill out all fields!") 
-    } else (createJournalEntry());
-})
 
     export default createEditButton
