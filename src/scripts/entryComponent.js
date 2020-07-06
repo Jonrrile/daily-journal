@@ -1,22 +1,22 @@
-/*
-    Purpose: To create, and return, a string template that
-    represents a single journal entry object as HTML
+//    Purpose: To create, and return, a string template that
+  //  represents a single journal entry object as HTML
 
-    Arguments: journalEntry (object)
+    //Arguments: journalEntry (object)
 
 
-const makeJournalEntryComponent = {
-    journalEntry (singleEntry) {
-    // Create your own HTML structure for a journal entry
-    return`
-    <div>
+const makeJournalEntryComponent = (singleEntry) => {
+    const domElement = `
+    <div class="entry__card">
    <h1>${singleEntry.date}</h1>
+   <p>${singleEntry.id}</p>
     <p>${singleEntry.concept}</p>
     <p>${singleEntry.entry}</p>
     <p>${singleEntry.mood}</p>
+    <button id="deleteEntry--${singleEntry.id}">Delete</button>
     </div>`
+    return domElement
     }
-}
+
 
 export default makeJournalEntryComponent;
 

@@ -1,7 +1,5 @@
-/*
-function generateJournalEntry(id, date, concept, entry, mood) {
+function generateJournalEntry(date, concept, entry, mood) {
     const newEntry = {
-        id: id, 
         date: date,
         concept: concept,
         entry: entry,
@@ -11,4 +9,3 @@ function generateJournalEntry(id, date, concept, entry, mood) {
 }
 
 export default generateJournalEntry; 
-*/

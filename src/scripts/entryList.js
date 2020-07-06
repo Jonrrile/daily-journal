@@ -1,23 +1,16 @@
-/*
+import API from "./data.js";
 import makeJournalEntryComponent from "./entryComponent.js"
-import API from "./data.js"
 
-const renderJournalEntries = {
+const entryContainer = document.querySelector(".entryLog")
 
-    entryMaker(journalEntries) {
-        const journalElement = document.querySelector(".entryLog")
-        journalElement.innerHTML = ""
-    for (let  singleEntry of journalEntries) {
-        const journalHTML = makeJournalEntryComponent.journalEntry(singleEntry)
-        journalElement.innerHTML += journalHTML
-    }
-
-
-    }
-
+const renderJournalEntries = () => {
+    entryContainer.innerHTML = "";
+    API.getJournalEntries()
+    .then((journalArray) => {
+        journalArray.forEach(item => {
+            entryContainer.innerHTML += makeJournalEntryComponent(item);
+        })
+    })
 }
 
-console.log(entryMaker)
-
-export default renderJournalEntries
-*/
+export default renderJournalEntries;
