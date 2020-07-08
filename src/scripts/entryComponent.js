@@ -19,11 +19,3 @@ const makeJournalEntryComponent = (singleEntry) => {
 
 
 export default makeJournalEntryComponent;
-
-/*
-Responsible for generating a list of fish HTML
-representations, and putting in the browser
-*/      
-
-
-// Invoke the render function
