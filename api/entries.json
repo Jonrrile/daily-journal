@@ -15,18 +15,10 @@
       "mood": "Confused"
     },
     {
-      "id": 3,
-      "date": "June 3rd 2020",
-      "concept": "JavaScript Functions",
-      "entry": "Learning a little  more but still very confused about functions",
-      "mood": "hopeful?"
-    },
-    {
-      "id": 4,
-      "date": "June 5th 2020",
-      "concept": "Browser Interactivity",
-      "entry": "Learned how to implement some toggling and slect elements into our website. Things are clicking a litte!",
-      "mood": "Finally Friday (:"
+      "date": "2020-07-06",
+      "concept": "CRUD",
+      "entry": "Working on the edit function for my journal",
+      "id": 3
     }
   ]
 }

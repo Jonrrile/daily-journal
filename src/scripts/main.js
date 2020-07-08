@@ -25,3 +25,21 @@ document.querySelector(".entryLog").addEventListener("click", event => {
         .then(renderJournalEntries)
     }
 })
+
+document.querySelector(".entryLog").addEventListener("click", event => {
+    if (event.target.id.startsWith("editEntry--")) {
+        const entryToEdit = event.target.id.split("--")[1]
+        updateFormFields(entryToEdit)
+    }
+})
+
+const updateFormFields = entryId => {
+    const conceptToEdit = document.querySelector("#concepts").value
+    const entryToEdit = document.querySelector("#entry").value
+
+    fetch(`http://localhost:3000/journalEntries/${id}`)
+    .then(response => response.json())
+    .then(recipe => {
+
+    })
+}
